@@ -1,11 +1,11 @@
--module(day1).
+-module(main).
 -export([hello/0, day1/0]).
 
 hello() ->
     io:format("Hello~n").
 
 day1() ->
-    {ok, Device} = file:open("input_day1", [read]),
+    {ok, Device} = file:open("input", [read]),
     read_stdin(0, 0, Device).
 
 read_stdin(Curr, Max, Device) ->
